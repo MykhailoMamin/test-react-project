@@ -1,11 +1,13 @@
+import css from './FriendList.module.css';
+
 export default function FriendList({ friends }) {
   return (
-    <ul class="friend-list">
+    <ul className={css.friendList}>
       {friends.map(({ avatar, name, isOnline, id }) => (
-        <li key={id} class="item">
+        <li key={id} className={css.list}>
           <span class="status">{isOnline}</span>
           <img class="avatar" src={avatar} alt="User avatar" width="48" />
-          <p class="name">{name}</p>
+          <p className={css.name}>{name}</p>
         </li>
       ))}
     </ul>
